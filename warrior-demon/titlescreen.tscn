@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d1okprsv74pwh"]
+
+[ext_resource type="Texture2D" uid="uid://d37rkdpdgmctg" path="res://background.jpg" id="1_cjnew"]
+[ext_resource type="Script" uid="uid://dmcqwq4mtasrk" path="res://titlescreen.gd" id="1_goadl"]
+
+[node name="Titlescreen" type="Node2D" unique_id=422420161]
+script = ExtResource("1_goadl")
+
+[node name="background" type="TextureRect" parent="." unique_id=1456014860]
+offset_right = 1153.0
+offset_bottom = 651.0
+texture = ExtResource("1_cjnew")
+
+[node name="title" type="RichTextLabel" parent="background" unique_id=1624824374]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 181.0
+offset_right = 893.0
+offset_bottom = 303.0
+theme_override_colors/default_color = Color(0.9684869, 0.25700414, 0.7002252, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 78
+text = " WARRIOR-DEMON"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1261348888]
+offset_left = 396.0443
+offset_top = 293.10657
+offset_right = 632.0002
+offset_bottom = 578.6262
+rotation = -0.0032339888
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=1125135767]
+layout_mode = 2
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 34
+text = "Start Game"
+
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=1419273205]
+layout_mode = 2
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 34
+text = "Game settings"
+
+[node name="quir" type="Button" parent="VBoxContainer" unique_id=331567286]
+layout_mode = 2
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 34
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/start" to="VBoxContainer/start" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/quir" to="." method="_on_quir_pressed"]
